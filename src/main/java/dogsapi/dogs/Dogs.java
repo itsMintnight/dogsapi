@@ -9,13 +9,15 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name = "dogs")
+@Table(name = "Dogs")
 public class Dogs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String dogId;
+    private int dogId;
 
     private String name;
+
+    /* 
     private String breed;
     private String sex;
     private double weight;
@@ -24,12 +26,13 @@ public class Dogs {
     private String intakeDate;
     private String image;
     private String description;
-
+    */
 
     public Dogs() {
     }
 
-    public Dogs(String dogID, String name, String breed, String sex, double weight, int age, String location, String intakeDate, String image, String description) {
+    /*
+    public Dogs(int dogID, String name, String breed, String sex, double weight, int age, String location, String intakeDate, String image, String description) {
         this.dogId = dogId;
         this.name = name;
         this.breed = breed;
@@ -53,8 +56,9 @@ public class Dogs {
         this.image = image;
         this.description = description;
     }
+    */
 
-    public String getDogId() {
+    public int getDogId() {
         return dogId;
     }
 
@@ -63,6 +67,7 @@ public class Dogs {
     
     }
 
+    /*
     public String getSex() {
         return sex;
 
@@ -95,8 +100,9 @@ public class Dogs {
     public String getDescription() {
         return description;
     }
+    */
 
-    public void setDogId(String input) {
+    public void setDogId(int input) {
         dogId = input;
 
     }
@@ -106,6 +112,7 @@ public class Dogs {
     
     }
 
+    /*
     public void setSex(String input) {
         sex = input;
 
@@ -138,6 +145,5 @@ public class Dogs {
     public void setDescription(String input) {
         description = input;
     }
-
-
+    */
 }

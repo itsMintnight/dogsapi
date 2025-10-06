@@ -12,6 +12,10 @@ public class DogsService {
         return dogsRepository.getAllDogs();
     }
 
+    public void makeDog() {
+        makeDog();
+    }
+
 
 
 }
