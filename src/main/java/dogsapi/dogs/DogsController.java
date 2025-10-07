@@ -14,12 +14,12 @@ public class DogsController {
     @Autowired
     private DogsService dogsService;
 
-    @GetMapping("")
+    @GetMapping("/dogs")
     public List<Dogs> getAllDogs() {
         return dogsService.getAllDogs();
     }
 
-    @PostMapping("")
+    @PostMapping("/dogs")
     public Dogs createDog(@RequestBody Dogs dog) {
         return dogsService.createDog(dog);
     }
