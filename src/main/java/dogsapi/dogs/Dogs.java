@@ -50,7 +50,10 @@ public class Dogs {
 
     public String getName() {
         return name;
-    
+    }
+
+    public String getBreed() {
+        return breed;
     }
 
     public String getSex() {
@@ -95,6 +98,10 @@ public class Dogs {
 
     public void setName(String input) {
         name = input;
+    }
+
+    public void setBreed(String input) {
+        breed = input;
     }
 
     public void setSex(String input) {
