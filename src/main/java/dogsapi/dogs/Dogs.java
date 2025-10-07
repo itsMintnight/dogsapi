@@ -99,31 +99,25 @@ public class Dogs {
 
     public void setSex(String input) {
         sex = input;
-
     }
     public void setWeight(Double input) {
         weight = input;
-
     }
 
     public void setAge(int input) {
         age = input;
-
     }
 
     public void setLocation(String input) {
         location = input;
-
     }
 
     public void setIntakeDate(String input) {
         intakeDate = input;
-
     }
 
     public void setImage(String input) {
         image = input;
-
     }
 
     public void setDescription(String input) {
