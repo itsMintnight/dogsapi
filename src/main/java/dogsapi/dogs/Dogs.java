@@ -14,8 +14,6 @@ public class Dogs {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long dogID;
     private String name;
-
-    /* 
     private String breed;
     private String sex;
     private double weight;
@@ -24,30 +22,11 @@ public class Dogs {
     private String intakeDate;
     private String image;
     private String description;
-    */
-
+    
     /*
      * Constructors
      */
     public Dogs() {
-    }
-
-    public Dogs(String name) {
-        this.name = name;
-    }
-
-    /*
-    public Dogs(Long dogID, String name, String breed, String sex, double weight, int age, String location, String intakeDate, String image, String description) {
-        this.dogID = dogID;
-        this.name = name;
-        this.breed = breed;
-        this.sex = sex;
-        this.weight = weight;
-        this.age = age;
-        this.location = location;
-        this.intakeDate = intakeDate;
-        this.image = image;
-        this.description = description;
     }
 
     public Dogs(String name, String breed, String sex, double weight, int age, String location, String intakeDate, String image, String description) {
@@ -61,7 +40,6 @@ public class Dogs {
         this.image = image;
         this.description = description;
     }
-    */
 
     /*
      * Getters
@@ -75,7 +53,6 @@ public class Dogs {
     
     }
 
-    /*
     public String getSex() {
         return sex;
 
@@ -108,7 +85,6 @@ public class Dogs {
     public String getDescription() {
         return description;
     }
-    */
 
     /*
      * Setters
@@ -121,7 +97,6 @@ public class Dogs {
         name = input;
     }
 
-    /*
     public void setSex(String input) {
         sex = input;
 
@@ -154,5 +129,4 @@ public class Dogs {
     public void setDescription(String input) {
         description = input;
     }
-    */
 }

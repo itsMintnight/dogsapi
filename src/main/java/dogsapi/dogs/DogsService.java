@@ -13,6 +13,14 @@ public class DogsService {
         return dogsRepository.findAll();
     }
 
+    public Dogs getDogByID(Long ID) {
+        return dogsRepository.findById(ID).orElse(null);
+    }
+
+    public List<Dogs> getDogsByBreed(String breed) {
+        return dogsRepository.findByBreed(breed);
+    }
+
     public Dogs createDog(Dogs dog) {
         return dogsRepository.save(dog);
     }

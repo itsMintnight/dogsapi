@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,14 +15,34 @@ public class DogsController {
     @Autowired
     private DogsService dogsService;
 
+
+    /*
+     * Get Mappings
+     */
     @GetMapping("/dogs")
     public List<Dogs> getAllDogs() {
         return dogsService.getAllDogs();
     }
 
+    @GetMapping("/dogs/{id}")
+    public Dogs getDogByID(@PathVariable Long ID) {
+        return dogsService.getDogByID(ID);
+    }
+
+    @GetMapping("/dogs/breed/{breed}")
+    public List<Dogs> getDogsByBreed(@PathVariable String breed) {
+        return dogsService.getDogsByBreed(breed);
+    }
+
+
+    /*
+     * Post Mappings
+     */
     @PostMapping("/dogs")
     public Dogs createDog(@RequestBody Dogs dog) {
         return dogsService.createDog(dog);
     }
+
+
 
 }
