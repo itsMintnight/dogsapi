@@ -1,6 +1,5 @@
 package dogsapi.dogs;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,8 +12,7 @@ import jakarta.persistence.Table;
 public class Dogs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int dogId;
-
+    private Long dogID;
     private String name;
 
     /* 
@@ -28,12 +26,19 @@ public class Dogs {
     private String description;
     */
 
+    /*
+     * Constructors
+     */
     public Dogs() {
     }
 
+    public Dogs(String name) {
+        this.name = name;
+    }
+
     /*
-    public Dogs(int dogID, String name, String breed, String sex, double weight, int age, String location, String intakeDate, String image, String description) {
-        this.dogId = dogId;
+    public Dogs(Long dogID, String name, String breed, String sex, double weight, int age, String location, String intakeDate, String image, String description) {
+        this.dogID = dogID;
         this.name = name;
         this.breed = breed;
         this.sex = sex;
@@ -58,8 +63,11 @@ public class Dogs {
     }
     */
 
-    public int getDogId() {
-        return dogId;
+    /*
+     * Getters
+     */
+    public Long getdogID() {
+        return dogID;
     }
 
     public String getName() {
@@ -102,14 +110,15 @@ public class Dogs {
     }
     */
 
-    public void setDogId(int input) {
-        dogId = input;
-
+    /*
+     * Setters
+     */
+    public void setdogID(Long input) {
+        dogID = input;
     }
 
     public void setName(String input) {
         name = input;
-    
     }
 
     /*

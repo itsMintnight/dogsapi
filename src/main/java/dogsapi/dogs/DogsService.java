@@ -1,5 +1,6 @@
 package dogsapi.dogs;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,14 +9,11 @@ public class DogsService {
     @Autowired
     private DogsRepository dogsRepository;
 
-    public Object getAllDogs () {
-        return dogsRepository.getAllDogs();
+    public List<Dogs> getAllDogs() {
+        return dogsRepository.findAll();
     }
 
-    public void makeDog() {
-        makeDog();
+    public Dogs createDog(Dogs dog) {
+        return dogsRepository.save(dog);
     }
-
-
-
 }
