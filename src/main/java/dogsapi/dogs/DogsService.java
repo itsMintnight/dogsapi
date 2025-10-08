@@ -25,6 +25,10 @@ public class DogsService {
         return dogsRepository.save(dog);
     }
 
+    public Dogs updateDog(Long ID, Dogs dog) {
+        return dogsRepository.save(dog);
+    }
+
     public List<Dogs> getDogsByName(String name) {
         return dogsRepository.findByName(name);
     }

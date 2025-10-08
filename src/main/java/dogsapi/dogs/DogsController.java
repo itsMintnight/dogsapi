@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,6 +49,16 @@ public class DogsController {
     public Dogs createDog(@RequestBody Dogs dog) {
         return dogsService.createDog(dog);
     }
+
+    /*
+     * Put Mappings
+     */
+    @PutMapping("/dogs/{ID}")
+    public Dogs updateDog(@PathVariable Long ID, @RequestBody Dogs dog) {
+        dogsService.updateDog(ID, dog);
+        return dogsService.getDogByID(ID);
+    }
+
 
     /*
      * Delete Mappings
