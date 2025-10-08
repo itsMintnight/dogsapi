@@ -18,10 +18,14 @@ public class DogsService {
     }
 
     public List<Dogs> getDogsByBreed(String breed) {
-        return dogsRepository.findByBreed(breed);
+        return dogsRepository.findByString(breed);
     }
 
     public Dogs createDog(Dogs dog) {
         return dogsRepository.save(dog);
+    }
+
+    public List<Dogs> getDogsByName(String name) {
+        return dogsRepository.findByName(name);
     }
 }

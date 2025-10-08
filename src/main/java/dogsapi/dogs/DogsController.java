@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -32,6 +33,11 @@ public class DogsController {
     @GetMapping("/dogs/breed/{breed}")
     public List<Dogs> getDogsByBreed(@PathVariable String breed) {
         return dogsService.getDogsByBreed(breed);
+    }
+
+    @GetMapping("/dogs/search")
+    public List<Dogs> getDogsByName(@RequestParam String name) {
+        return dogsService.getDogsByName(name);
     }
 
 
