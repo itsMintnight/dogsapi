@@ -28,4 +28,8 @@ public class DogsService {
     public List<Dogs> getDogsByName(String name) {
         return dogsRepository.findByName(name);
     }
+
+    public void deleteDogByID(Long ID) {
+        dogsRepository.deleteById(ID);
+    }
 }

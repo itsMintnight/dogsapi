@@ -12,9 +12,4 @@ public interface DogsRepository extends JpaRepository<Dogs, Long> {
 
     @Query(value = "select * from dogs d where d.name like %?1% ", nativeQuery = true)  
     public List<Dogs> findByName(String name);
-    
-
-    
-
-
 }
