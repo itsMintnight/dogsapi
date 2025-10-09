@@ -17,8 +17,8 @@ public class DogsService {
         return dogsRepository.findAll();
     }
 
-    public Dogs getDogByID(Long ID) {
-        return dogsRepository.findById(ID).orElse(null);
+    public Dogs getDogByID(Long dogID) {
+        return dogsRepository.findById(dogID).orElse(null);
     }
 
     public List<Dogs> getDogsByBreed(String breed) {
