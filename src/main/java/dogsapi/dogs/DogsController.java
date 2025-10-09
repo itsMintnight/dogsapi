@@ -25,7 +25,7 @@ public class DogsController {
         return dogsService.getAllDogs();
     }
 
-    @GetMapping("/dogs/{id}")
+    @GetMapping("/dogs/{ID}")
     public Dogs getDogByID(@PathVariable Long ID) {
         return dogsService.getDogByID(ID);
     }
