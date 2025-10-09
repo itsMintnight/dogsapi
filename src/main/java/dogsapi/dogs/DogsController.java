@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DogsController {
-    
     @Autowired
     private DogsService dogsService;
-
 
     /*
      * Get Mappings
