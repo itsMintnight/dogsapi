@@ -30,7 +30,7 @@ public class DogsController {
         return dogsService.getDogByID(ID);
     }
 
-    @GetMapping("/dogs/breed/{breed}")
+    @GetMapping("/dogs/breed/{breed}") 
     public List<Dogs> getDogsByBreed(@PathVariable String breed) {
         return dogsService.getDogsByBreed(breed);
     }
