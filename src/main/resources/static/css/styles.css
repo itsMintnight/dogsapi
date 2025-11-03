@@ -1,0 +1,98 @@
+/* Global */
+html {
+  background-color: floralwhite;
+  font-family: monospace;
+}
+
+body {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 0px;
+
+  background-color: floralwhite;
+}
+
+p {
+  white-space: pre-line;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+
+
+/*nav.js*/
+header {
+  position: sticky;
+  top: 0;
+  background-color: floralwhite;
+  padding-top: 5px;
+}
+
+#homeicon {
+  float: left;
+  padding: 0;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: right;
+}
+
+.nav a {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+
+/* index.html */
+.dog_pictures_container {
+  display: flex;
+  min-width: 300px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.dog_pictures_container div {
+  width: 250px;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+.search_container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+/* details.html */
+.details_container {
+  height: 250px;
+}
+
+.details_container img {
+  float: left;
+  margin-right: 25px;
+}
+
+
+
+/* about.html */
+#specialimage {
+  display: flex;
+  min-width:250px;
+  margin: 10px;
+}
+
+.list_container {
+  padding-left: 25px;
+}
