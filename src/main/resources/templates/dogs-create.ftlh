@@ -14,39 +14,39 @@
 		
 		<form id="new-dog" action="/dogs" method="post">
 			<label for="name">Name</label><br>
-			<input type="text" id="name" name="name" placeholder="name"><br>
+			<input type="text" id="name" name="name" placeholder="ex: Max"><br>
             <br>
 
             <label for="breed">Breed</label><br>
-			<input type="text" id="breed" name="breed" placeholder="breed"><br>
+			<input type="text" id="breed" name="breed" placeholder="ex: Jack Russel Terrier"><br>
             <br>
 
             <label for="sex">Sex</label><br>
-			<input type="text" id="sex" name="sex" placeholder="sex"><br>
+			<input type="text" id="sex" name="sex" placeholder="ex: Male"><br>
             <br>
 
             <label for="weight">Weight</label><br>
-			<input type="number" id="weight" name="weight" placeholder="weight"><br>
+			<input type="number" id="weight" name="weight" placeholder="ex: 15"><br>
             <br>
 
             <label for="age">Age</label><br>
-			<input type="number" id="age" name="age" placeholder="age"><br>
+			<input type="number" id="age" name="age" placeholder="ex: 17"><br>
             <br>
 
             <label for="location">Location</label><br>
-			<input type="text" id="location" name="location" placeholder="location"><br>
+			<input type="text" id="location" name="location" placeholder="ex: Happy Farm"><br>
             <br>
 
             <label for="intakeDate">Intake Date</label><br>
-			<input type="text" id="intakeDate" name="intakeDate" placeholder="intake date"><br>
+			<input type="text" id="intakeDate" name="intakeDate" placeholder="ex: 11/01/2007"><br>
             <br>
 
             <label for="image">Image Link</label><br>
-			<input type="text" id="image" name="image" placeholder="image link"><br>
+			<input type="text" id="image" name="image" placeholder="ex: /images/max.jpg"><br>
             <br>
 
             <label for="description">Description</label><br>
-			<textarea rows="5" cols="50" id="description" name="description" placeholder="description"></textarea><br>
+			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog"></textarea><br>
             <br>
 
 			<button type="submit">Save</button>
