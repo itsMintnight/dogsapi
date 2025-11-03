@@ -23,6 +23,7 @@
 			</ul>
 			
 			<a href="/dogs/updateForm/${dog.dogID}"><input type="button" value="Edit Dog Profile"></a>
+			<button onclick="confirmDelete()" style="color: red">Delete</button>
 		</div>
 
 		<h1>${dog.name}</h1>
@@ -32,5 +33,15 @@
 			<p>${dog.description}</p>
 		</div>
 	</main>
+
+	<script>
+		function confirmDelete() {
+			if (confirm("This will delete ${dog.name}.") == true) {
+				window.location.href = "http://localhost:8080/dogs/delete/${dog.dogID}";	
+			} else {
+				alert("Cancelled.");
+			}
+		}
+	</script>
 </body>
 </html>

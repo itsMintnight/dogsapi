@@ -63,6 +63,12 @@ public class DogsController {
         return "redirect:/dogs/" + dogID;
     }
 
+    @GetMapping("/dogs/delete/{ID}")
+    public String deleteDogByID(@PathVariable Long ID) {
+        dogsService.deleteDogByID(ID);
+        return "redirect:/dogs";
+    }
+
 
 
 
@@ -76,24 +82,7 @@ public class DogsController {
         return dogsService.getDogsByName(name);
     }
 
- 
 
-    /*
-     * Put Mappings
-     */
-    @PutMapping("/dogs/{ID}")
-    public Dogs updateDog(@PathVariable Long ID, @RequestBody Dogs dog) {
-        dogsService.updateDog(ID, dog);
-        return dogsService.getDogByID(ID);
-    }
-
-
-    /*
-     * Delete Mappings
-     */
-    @DeleteMapping("/dogs/{ID}")
-    public void deleteDogByID(@PathVariable Long ID) {
-        dogsService.deleteDogByID(ID);
-    }
+    
 
 }

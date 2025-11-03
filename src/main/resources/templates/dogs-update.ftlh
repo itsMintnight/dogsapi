@@ -51,10 +51,11 @@
 			<textarea rows="5" cols="50" id="description" name="description">${dog.description}</textarea><br>
             <br>
 
-			<button type="submit">Save</button>
-			<a href="/dogs">Cancel</a>
+
+            
+			<button type="submit">Save</button><br>
+			<a href="/dogs/${dog.dogID}"><input type="button" value="Cancel"></a><br>
 		</form>
 	</main>
 </body>
-
 </html>
