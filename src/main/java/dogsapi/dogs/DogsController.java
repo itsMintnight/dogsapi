@@ -50,7 +50,18 @@ public class DogsController {
         return "redirect:/dogs/" + dogID;
     }
 
-  
+    @GetMapping("/dogs/updateForm/{dogID}")
+    public String showUpdateForm(Model model, @PathVariable Long dogID) {
+        Dogs dog = dogsService.getDogByID(dogID);
+        model.addAttribute("dog", dog);
+        return "dogs-update";
+    }
+
+    @PostMapping("/dogs/updateForm/{dogID}")
+    public String updateDog(Dogs dog, @PathVariable Long dogID) {
+        dogsService.updateDog(dogID, dog);
+        return "redirect:/dogs/" + dogID;
+    }
 
 
 

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<#include "nav.html">
-<title>About ${dog.name}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+	<title>About ${dog.name}</title>
+</head>
+
+<#include "header.html">
 
 <body>
 	<main>
 		<div class="details_container">
-				<img src=${dog.image} alt="${dog.name}">
+			<img src=${dog.image} alt="${dog.name}">
+			
 			<ul>
 				<li>Breed: ${dog.breed}</li>
 				<li>Sex: ${dog.sex}</li>
@@ -14,8 +21,10 @@
 				<li>Location: ${dog.location}</li>
 				<li>Intake Date: ${dog.intakeDate}</li>
 			</ul>
-
+			
+			<a href="/dogs/updateForm/${dog.dogID}"><input type="button" value="Edit Dog Profile"></a>
 		</div>
+
 		<h1>${dog.name}</h1>
 		<hr style="margin-top: 20px">	
 
