@@ -40,7 +40,7 @@
             <br>
 
             <label for="intakeDate">Intake Date</label><br>
-			<input type="text" id="intakeDate" name="intakeDate" placeholder="intake date" value="${dog.intakeDate}"><br>
+			<input type="date" id="intakeDate" name="intakeDate" placeholder="intake date" value="${dog.intakeDate}"><br>
             <br>
 
             <label for="image">Image Link</label><br>

@@ -38,7 +38,7 @@
             <br>
 
             <label for="intakeDate">Intake Date</label><br>
-			<input type="text" id="intakeDate" name="intakeDate" placeholder="ex: 11/01/2007"><br>
+			<input type="date" id="intakeDate" name="intakeDate"><br>
             <br>
 
             <label for="image">Image Link</label><br>

@@ -1,5 +1,7 @@
 package dogsapi.dogs;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +24,7 @@ public class Dogs {
     private double weight;
     private int age;
     private String location;
-    private String intakeDate;
+    private Date intakeDate;
     private String image;
     private String description;
 }
