@@ -2,13 +2,12 @@
 html {
   background-color: floralwhite;
   font-family: monospace;
+  margin-left: 25vw;
+  margin-right: 25vw;
 }
 
 body {
-  margin-left: 100px;
-  margin-right: 100px;
   margin-top: 0px;
-
   background-color: floralwhite;
 }
 
