@@ -21,8 +21,11 @@
 			<input type="text" id="breed" name="breed" placeholder="ex: Jack Russel Terrier"><br>
             <br>
 
-            <label for="sex">Sex</label><br>
-			<input type="text" id="sex" name="sex" placeholder="ex: Male"><br>
+            <p>Sex</p>
+			<input type="radio" id="male" name="sex" value="Male">
+            <label for="sex">Male</label><br>
+            <input type="radio" id="female" name="sex" value="Female">
+            <label for="sex">Female</label><br>
             <br>
 
             <label for="weight">Weight</label><br>

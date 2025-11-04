@@ -19,12 +19,15 @@
 			<input type="text" id="name" name="name" placeholder="name" value="${dog.name}"><br>
             <br>
 
-            <label for="breed">Breed</label><br>
+            <label for="breed">Breed    </label><br>
 			<input type="text" id="breed" name="breed" placeholder="breed" value="${dog.breed}"><br>
             <br>
 
-            <label for="sex">Sex</label><br>
-			<input type="text" id="sex" name="sex" placeholder="sex" value="${dog.sex}"><br>
+            <p>Sex</p>
+            <input type="radio" id="male" name="sex" value="Male">
+            <label for="sex">Male</label><br>
+            <input type="radio" id="female" name="sex" value="Female">
+            <label for="sex">Female</label><br>
             <br>
 
             <label for="weight">Weight</label><br>
@@ -50,8 +53,6 @@
             <label for="description">Description</label><br>
 			<textarea rows="5" cols="50" id="description" name="description">${dog.description}</textarea><br>
             <br>
-
-
             
 			<button type="submit">Save</button><br>
 			<a href="/dogs/${dog.dogID}"><input type="button" value="Cancel"></a><br>
