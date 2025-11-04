@@ -5,12 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -44,10 +41,9 @@ public class DogsController {
     }
 
     @PostMapping("/dogs")
-    public String createDog(Dogs dog) {
-        dogsService.createDog(dog);
-        Long dogID = dog.getDogID();
-        return "redirect:/dogs/" + dogID;
+    public String createDog(Dogs dog, @RequestParam MultipartFile image) {
+        Dogs newDog = dogsService.createDog(dog, image);
+        return "redirect:/dogs/" + newDog.getDogID();
     }
 
     @GetMapping("/dogs/updateForm/{dogID}")

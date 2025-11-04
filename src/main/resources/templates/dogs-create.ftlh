@@ -12,7 +12,7 @@
 	<main>
 			<h1>Add New Dog</h1>
 		
-		<form id="new-dog" action="/dogs" method="post">
+		<form id="new-dog" action="/dogs" method="post" enctype="multipart/form-data">
 			<label for="name">Name</label><br>
 			<input type="text" id="name" name="name" placeholder="ex: Max"><br>
             <br>
@@ -41,8 +41,10 @@
 			<input type="text" id="intakeDate" name="intakeDate" placeholder="ex: 11/01/2007"><br>
             <br>
 
-            <label for="image">Image Link</label><br>
-			<input type="text" id="image" name="image" placeholder="ex: /images/max.jpg"><br>
+			<input type="hidden" id="image" name="image" placeholder="image path" value="/images">
+
+            <label for="imageUpload">Image</label><br>
+			<input type="file" id="imageUpload" name="imageUpload"><br>
             <br>
 
             <label for="description">Description</label><br>
