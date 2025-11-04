@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.Query;
  
 public interface DogsRepository extends JpaRepository<Dogs, Long> {  
 
-    @Query(value = "select * from dogs d where d.breed like %?1% ", nativeQuery = true)  
+    @Query(value = "select * from dogs where breed like %?1% ", nativeQuery = true)  
     public List<Dogs> findDogsByBreed(String breed);
 
-    @Query(value = "select * from dogs d where d.name like %?1% ", nativeQuery = true)  
+    @Query(value = "select * from dogs where name like %?1% ", nativeQuery = true)  
     public List<Dogs> findDogsByName(String name);
 }   

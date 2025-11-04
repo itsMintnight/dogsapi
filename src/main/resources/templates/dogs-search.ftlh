@@ -12,7 +12,7 @@
 <body>
 	<main>
 		<div class="dog_pictures_container">
-            <#list allDogs as dog>
+            <#list dogsByName as dog>
                 <div>
                     <a href="/dogs/${dog.dogID}"><img src=${dog.image} alt="${dog.name}"></a>
                     <p><strong>${dog.name}</strong></p>
@@ -21,12 +21,6 @@
             </#list>
 		</div>
 	</main>	
-
-    <script>
-        function search(input) {
-            location.replace("http://localhost:8080/dogs/search?name=" + input)
-        }
-    </script>
 </body>
 </html>
 

@@ -5,14 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class DogsController {
@@ -27,6 +23,12 @@ public class DogsController {
         // return dogsService.getAllDogs();
         model.addAttribute("allDogs", dogsService.getAllDogs());
         return "dogs-list";
+    }
+
+    @GetMapping("/dogs/search")
+    public String getDogsByName (Model model, @RequestParam String name) {
+        model.addAttribute("dogsByName", dogsService.getDogsByName(name));
+        return "dogs-search";
     }
 
     @GetMapping("/dogs/{dogID}")
@@ -69,20 +71,8 @@ public class DogsController {
         return "redirect:/dogs";
     }
 
-
-
-
     @GetMapping("/dogs/breed/{breed}") 
     public List<Dogs> getDogsByBreed(@PathVariable String breed) {
         return dogsService.getDogsByBreed(breed);
     }
-
-    @GetMapping("/dogs/search")
-    public List<Dogs> getDogsByName(@RequestParam String name) {
-        return dogsService.getDogsByName(name);
-    }
-
-
-    
-
 }
