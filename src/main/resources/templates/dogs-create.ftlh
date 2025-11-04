@@ -10,46 +10,46 @@
 
 <body>
 	<main>
-			<h1>Add New Dog</h1>
+        <h1>Add New Dog</h1>
 		
 		<form id="new-dog" action="/dogs" method="post">
 			<label for="name">Name</label><br>
-			<input type="text" id="name" name="name" placeholder="ex: Max"><br>
+			<input type="text" id="name" name="name" placeholder="ex: Max" required><br>
             <br>
 
             <label for="breed">Breed</label><br>
-			<input type="text" id="breed" name="breed" placeholder="ex: Jack Russel Terrier"><br>
+			<input type="text" id="breed" name="breed" placeholder="ex: Jack Russel Terrier" required><br>
             <br>
 
             <p>Sex</p>
-			<input type="radio" id="male" name="sex" value="Male">
+			<input type="radio" id="male" name="sex" value="Male" required>
             <label for="sex">Male</label><br>
-            <input type="radio" id="female" name="sex" value="Female">
+            <input type="radio" id="female" name="sex" value="Female" required>
             <label for="sex">Female</label><br>
             <br>
 
-            <label for="weight">Weight</label><br>
-			<input type="number" id="weight" name="weight" placeholder="ex: 15"><br>
+            <label for="weight">Weight (lbs)</label><br>
+			<input type="number" id="weight" name="weight" placeholder="ex: 15" required><br>
             <br>
 
-            <label for="age">Age</label><br>
-			<input type="number" id="age" name="age" placeholder="ex: 17"><br>
+            <label for="age">Age (yrs)</label><br>
+			<input type="number" id="age" name="age" placeholder="ex: 17" required><br>
             <br>
 
             <label for="location">Location</label><br>
-			<input type="text" id="location" name="location" placeholder="ex: Happy Farm"><br>
+			<input type="text" id="location" name="location" placeholder="ex: Happy Farm" required><br>
             <br>
 
             <label for="intakeDate">Intake Date</label><br>
-			<input type="date" id="intakeDate" name="intakeDate"><br>
+			<input type="date" id="intakeDate" name="intakeDate" required><br>
             <br>
 
             <label for="image">Image Link</label><br>
-			<input type="text" id="image" name="image" placeholder="ex: /images/max.jpg"><br>
+			<input type="text" id="image" name="image" placeholder="ex: /images/max.jpg" required><br>
             <br>
 
             <label for="description">Description</label><br>
-			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog"></textarea><br>
+			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog" required></textarea><br>
             <br>
 
 			<button type="submit">Save</button>
