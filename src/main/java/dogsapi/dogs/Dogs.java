@@ -22,7 +22,7 @@ public class Dogs {
     private String breed;
     private String sex;
     private double weight;
-    private int age;
+    private double age;
     private String location;
     private Date intakeDate;
     private String image;

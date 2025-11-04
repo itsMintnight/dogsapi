@@ -29,6 +29,10 @@ public class DogsService {
         return dogsRepository.findDogsByName(name);
     }
 
+    public String findIntakeDate(Dogs dog) {
+        return dogsRepository.findIntakeDate(dog.getDogID());
+    }
+
     /*
      * Post Mappings
      */

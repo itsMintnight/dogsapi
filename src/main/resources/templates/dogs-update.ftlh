@@ -31,23 +31,23 @@
             <br>
 
             <label for="weight">Weight (lbs)</label><br>
-			<input type="number" id="weight" name="weight" placeholder="weight" value="${dog.weight}" required><br>
+			<input type="number" step="any" id="weight" name="weight" placeholder="weight" value="${dog.weight}" required><br>
             <br>
 
             <label for="age">Age (yrs)</label><br>
-			<input type="number" id="age" name="age" placeholder="age" value="${dog.age}" required><br>
+			<input type="number" step="any" id="age" name="age" placeholder="age" value="${dog.age}" required><br>
             <br>
 
             <label for="location">Location</label><br>
-			<input type="text" id="location" name="location" placeholder="location" value="${dog.location}" required><br>
+			<input type="text" id="location" name="location" placeholder="location" maxlength="255" value="${dog.location}" required><br>
             <br>
 
             <label for="intakeDate">Intake Date</label><br>
-			<input type="date" id="intakeDate" name="intakeDate" placeholder="intake date" value="${dog.intakeDate}" required><br>
+			<input type="date" id="intakeDate" name="intakeDate" placeholder="intake date" value="${intakeDate}" required><br>
             <br>
 
             <label for="image">Image Link</label><br>
-			<input type="text" id="image" name="image" placeholder="image link" value="${dog.image}" required><br>
+			<input type="text" id="image" name="image" placeholder="image link" maxlength="255" value="${dog.image}" required><br>
             <br>
 
             <label for="description">Description</label><br>
@@ -58,5 +58,7 @@
 			<a href="/dogs/${dog.dogID}"><input type="button" value="Cancel"></a><br>
 		</form>
 	</main>
+
+    
 </body>
 </html>

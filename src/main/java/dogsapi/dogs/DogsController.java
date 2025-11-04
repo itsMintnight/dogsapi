@@ -56,6 +56,7 @@ public class DogsController {
     public String showUpdateForm(Model model, @PathVariable Long dogID) {
         Dogs dog = dogsService.getDogByID(dogID);
         model.addAttribute("dog", dog);
+        model.addAttribute("intakeDate", dogsService.findIntakeDate(dog));
         return "dogs-update";
     }
 

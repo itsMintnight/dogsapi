@@ -14,11 +14,11 @@
 		
 		<form id="new-dog" action="/dogs" method="post">
 			<label for="name">Name</label><br>
-			<input type="text" id="name" name="name" placeholder="ex: Max" required><br>
+			<input type="text" id="name" name="name" placeholder="ex: Max" maxlength="255" required><br>
             <br>
 
             <label for="breed">Breed</label><br>
-			<input type="text" id="breed" name="breed" placeholder="ex: Jack Russel Terrier" required><br>
+			<input type="text" id="breed" name="breed" placeholder="ex: Jack Russel Terrier" maxlength="255" required><br>
             <br>
 
             <p>Sex</p>
@@ -29,15 +29,15 @@
             <br>
 
             <label for="weight">Weight (lbs)</label><br>
-			<input type="number" id="weight" name="weight" placeholder="ex: 15" required><br>
+			<input type="number" step="any" id="weight" name="weight" placeholder="ex: 15" required><br>
             <br>
 
             <label for="age">Age (yrs)</label><br>
-			<input type="number" id="age" name="age" placeholder="ex: 17" required><br>
+			<input type="number" step="any" id="age" name="age" placeholder="ex: 17" required><br>
             <br>
 
             <label for="location">Location</label><br>
-			<input type="text" id="location" name="location" placeholder="ex: Happy Farm" required><br>
+			<input type="text" id="location" name="location" placeholder="ex: Happy Farm" maxlength="255" required><br>
             <br>
 
             <label for="intakeDate">Intake Date</label><br>
@@ -45,11 +45,11 @@
             <br>
 
             <label for="image">Image Link</label><br>
-			<input type="text" id="image" name="image" placeholder="ex: /images/max.jpg" required><br>
+			<input type="text" id="image" name="image" placeholder="ex: /images/max.jpg" maxlength="255" required><br>
             <br>
 
             <label for="description">Description</label><br>
-			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog" required></textarea><br>
+			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog" maxlength="255" required></textarea><br>
             <br>
 
 			<button type="submit">Save</button>
