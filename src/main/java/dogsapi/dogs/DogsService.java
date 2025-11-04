@@ -33,6 +33,26 @@ public class DogsService {
         return dogsRepository.findIntakeDate(dog.getDogID());
     }
 
+    public String isMaleChecked(Dogs dog) {
+        String sex = dogsRepository.findSex(dog.getDogID());
+
+        if (sex.compareTo("Male") == 0) {
+            return "checked";
+        } else {
+            return "";
+        }
+    }
+
+    public String isFemaleChecked(Dogs dog) {
+        String sex = dogsRepository.findSex(dog.getDogID());
+
+        if (sex.compareTo("Female") == 0) {
+            return "checked";
+        } else {
+            return "";
+        }
+    }
+
     /*
      * Post Mappings
      */

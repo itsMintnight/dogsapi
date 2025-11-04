@@ -15,4 +15,7 @@ public interface DogsRepository extends JpaRepository<Dogs, Long> {
 
     @Query(value = "select intake_date from dogs where dogid = ?1", nativeQuery = true)
     public String findIntakeDate(Long dogid);
+
+    @Query(value = "select sex from dogs where dogid = ?1", nativeQuery = true)
+    public String findSex(Long dogid);
 }   

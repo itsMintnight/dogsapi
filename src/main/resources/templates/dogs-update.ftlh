@@ -24,9 +24,9 @@
             <br>
 
             <p>Sex</p>
-            <input type="radio" id="male" name="sex" value="Male" required>
+            <input type="radio" id="male" name="sex" value="Male" ${isMaleChecked} required>
             <label for="sex">Male</label><br>
-            <input type="radio" id="female" name="sex" value="Female" required>
+            <input type="radio" id="female" name="sex" value="Female" ${isFemaleChecked} required>
             <label for="sex">Female</label><br>
             <br>
 

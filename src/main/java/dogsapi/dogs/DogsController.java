@@ -57,6 +57,8 @@ public class DogsController {
         Dogs dog = dogsService.getDogByID(dogID);
         model.addAttribute("dog", dog);
         model.addAttribute("intakeDate", dogsService.findIntakeDate(dog));
+        model.addAttribute("isMaleChecked", dogsService.isMaleChecked(dog));
+        model.addAttribute("isFemaleChecked", dogsService.isFemaleChecked(dog));
         return "dogs-update";
     }
 
