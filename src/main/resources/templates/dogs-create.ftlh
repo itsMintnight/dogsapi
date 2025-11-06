@@ -49,7 +49,7 @@
             <br>
 
             <label for="description">Description</label><br>
-			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog" maxlength="255" required></textarea><br>
+			<textarea rows="5" cols="50" id="description" name="description" placeholder="ex: Elderly black and white dog" required></textarea><br>
             <br>
 
 			<button type="submit">Save</button>
