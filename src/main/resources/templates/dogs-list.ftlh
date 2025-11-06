@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="en-us"> 
+    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,12 +23,6 @@
             </#list>
 		</div>
 	</main>	
-
-    <script>
-        function search(input) {
-            location.replace("http://localhost:8080/dogs/search?name=" + input)
-        }
-    </script>
 </body>
 </html>
 
